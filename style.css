@@ -1,0 +1,1449 @@
+body{
+font-family:Arial;
+margin:0;
+padding:0;
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #0d0d0d 0%, #0a1a2b 100%);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.4s ease;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== LOGO ===== */
+.logo a {
+    display: flex;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #d4af37;
+    text-decoration: none;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.logo a:hover {
+    transform: scale(1.02);
+}
+
+.logo span {
+    margin-left: 8px;
+    letter-spacing: 2px;
+}
+
+/* ===== MENÚ ===== */
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #d4af37;
+    transition: width 0.3s ease;
+}
+
+.nav a:hover {
+    color: #d4af37;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== BOTÓN COTIZACIÓN ===== */
+.btn-cotizar {
+    background: #030621;
+    color: #FFFFFF;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.btn-cotizar:hover {
+    background: #d4af37;
+    color: #1a2a3a !important; /* Asegura que el color se aplique */
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+}
+
+.btn-cotizar::after {
+    display: none; /* Elimina el subrayado */
+}
+
+/* ===== LÍNEA DECORATIVA ===== */
+.header-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0.4;
+}
+
+/* ===== MENÚ HAMBURGUESA ===== */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: #d4af37;
+    cursor: pointer;
+}
+.hero {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+
+    /* Capa 1: imagen con overlay oscuro */
+    background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('A1.jpeg') center/cover no-repeat;
+
+    /* Capa 2: patrón de puntos dorados (se superpone al resto) */
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(212,175,55,0.08) 2px, transparent 2px),
+        radial-gradient(circle at 80% 70%, rgba(212,175,55,0.08) 3px, transparent 3px),
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('A1.jpeg') center/cover no-repeat;
+}
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    color: #d4af37;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+.hero h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #d4af37;
+    margin: 15px auto 0;
+}
+.hero p {
+    font-size: 1.3rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 30px;
+}
+.hero .btn {
+    display: inline-block;
+    background: #d4af37;
+    color: #1a1a1a;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+.hero .btn:hover {
+    background: #b8952e;
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+}
+/* ===== SECCIÓN SERVICIOS ===== */
+.titulo-dorado {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    background: linear-gradient(180deg, #f5e56b, #d4af37, #b38728);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block; /* Importante para que el degradado funcione bien */
+}
+.servicios {
+    padding: 80px 5%; 
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.servicios-header {
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.servicios h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #1a2a3a;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.servicios h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #d4af37;
+    border-radius: 2px;
+}
+
+.servicios-header p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* ===== GRID DE SERVICIOS ===== */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ===== TARJETA DE SERVICIO ===== */
+.servicio-card {
+    background: #030621;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Línea decorativa superior (dorada) */
+.servicio-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #d4af37, #f5e56b, #d4af37);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.servicio-card:hover::before {
+    transform: translateX(0);
+}
+
+.servicio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+    border-color: #d4af37;
+}
+
+/* ===== ICONO ===== */
+.servicio-icono {
+    font-size: 56px;
+    display: block;
+	background: linear-gradient(180deg, #fcf6ba, #bf953f, #b38728, #fbf5b7);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.servicio-card:hover .servicio-icono {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+/* ===== TÍTULO ===== */
+.servicio-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #1a2a3a;
+    margin-bottom: 12px;
+}
+
+/* ===== DESCRIPCIÓN ===== */
+.servicio-card p {
+    color: #FFFFFF;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* ===== BOTÓN "MÁS INFORMACIÓN" ===== */
+.btn-servicio {
+    display: inline-block;
+    padding: 10px 35px;
+    background: transparent;
+    color: #d4af37;
+    border: 2px solid #d4af37;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.btn-servicio:hover {
+    background: #d4af37;
+    color: #1a2a3a;
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+    transform: scale(1.05);
+}
+/* ===== FLOTA ===== */
+.flota {
+    padding: 80px 5%; 
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.flota h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #1a2a3a;
+    margin-bottom: 10px;
+}
+
+.flota > p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+.flota-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== TARJETA CUADRADA ===== */
+.flota-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+    position: relative;  /* ← Necesario para que el badge se posicione dentro */
+}
+
+.flota-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: #d4af37;
+}
+
+/* ===== BADGES FLOTANTES ===== */
+.flota-badge {
+    position: absolute;
+    top: 15px;
+    right: -35px;               /* ← Mueve el badge a la derecha para que quede fuera */
+    transform: rotate(45deg);   /* ← Rota 45° para que sea diagonal */
+    background: #d4af37;
+    color: #1a2a3a;
+    padding: 5px 50px;          /* ← Padding horizontal grande para que sea una banda */
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 2;
+    white-space: nowrap;       /* ← Evita que el texto se parta en dos líneas */
+    text-align: center;
+}
+
+/* Dorado (Premium) */
+.flota-badge.premium {
+    background: linear-gradient(135deg, #d4af37, #f5e56b, #b38728);
+    color: #1a2a3a;
+}
+
+/* Azul oscuro (Popular) */
+.flota-badge.popular {
+    background: linear-gradient(135deg, #1a2a3a, #2c4a6a, #0d1b2a);
+    color: #ffffff;
+}
+
+/* Verde (Económico) */
+.flota-badge.economico {
+    background: linear-gradient(135deg, #2e7d32, #4caf50, #1b5e20);
+    color: #ffffff;
+}
+
+/* Azul claro (Familiar) */
+.flota-badge.familiar {
+    background: linear-gradient(135deg, #1565c0, #42a5f5, #0d47a1);
+    color: #ffffff;
+}
+
+/* ===== IMAGEN ===== */
+.flota-card .img-vehiculo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* ===== INFO DE LA TARJETA ===== */
+.flota-info {
+    padding: 15px 18px 20px;
+    text-align: left;
+}
+
+.flota-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #1a2a3a;
+    margin: 0 0 5px 0;
+}
+
+.flota-info p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.capacidad {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #1a2a3a;
+    font-weight: 600;
+}
+
+.btn-flota {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 20px;
+    background: transparent;
+    color: #d4af37;
+    border: 2px solid #d4af37;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-flota:hover {
+    background: #d4af37;
+    color: #1a2a3a;
+    box-shadow: 0 4px 12px rgba(212,175,55,0.3);
+}
+/* ===== RESERVAS ===== */
+.reservas {
+    padding: 80px 5%; 
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.reservas-content {
+    max-width: 900px;
+    margin: 0 auto;
+    /* Si quieres espacio entre el título y el formulario: */
+    padding: 0 10px;
+}
+
+.reservas h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #1a2a3a;
+    margin-bottom: 10px;
+}
+
+.reservas > .reservas-content > p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px; /* Espacio entre subtítulo y formulario */
+}
+
+/* ===== FORMULARIO ===== */
+.form-reserva {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* ← MODIFICA AQUÍ el espacio entre inputs */
+    background: #f8f9fa;
+    padding: 40px; /* ← Espacio interno del formulario */
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+/* ===== CAMPOS ===== */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 15px; /* ← Espacio interno del input */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #d4af37;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+.form-reserva {
+    row-gap: 25px;  /* Separación vertical entre filas */
+    column-gap: 20px; /* Separación horizontal entre columnas */
+}
+/* ===== BOTÓN ===== */
+.btn-reservar {
+    background: #d4af37;
+    color: #1a2a3a;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.btn-reservar:hover {
+    background: #b8952e;
+    transform: scale(1.02);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* ===== NOTA ===== */
+.form-nota {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 5px;
+}
+/* ===== CHECKBOX ===== */
+.checkbox-group {
+    text-align: left;
+    padding: 10px 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: #1a2a3a;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    accent-color: #d4af37;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.checkbox-nota {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 5px 0 0 28px;
+}
+
+/* ===== CAMPO DE ARCHIVO ===== */
+.file-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.file-input-wrapper input[type="file"] {
+    display: none;
+}
+
+/* ===== BOTÓN DE ADJUNTAR ARCHIVO (DORADO) ===== */
+.file-label {
+    background: linear-gradient(135deg, #d4af37, #f5e56b, #b38728);
+    color: #1a2a3a;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.file-label:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+    background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728);
+}
+
+.file-label .file-icon {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.file-label .file-text {
+    font-weight: 600;
+}
+/* ===== CONTENEDOR DE LA IMAGEN ===== */
+.ruta-imagen {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* ← RELACIÓN DE ASPECTO 16:9 */
+    overflow: hidden;
+    background: #1a2a3a;
+    flex-shrink: 0;
+}
+
+/* ===== CARRUSEL ===== */
+.carrusel-imagenes {
+    display: flex;
+    width: 300%; /* 3 imágenes */
+    height: 100%;
+    animation: carruselAnimacion 12s ease-in-out infinite;
+}
+
+.carrusel-imagenes.carrusel-2 {
+    width: 200%;
+    animation-duration: 8s;
+}
+
+.carrusel-imagenes .ruta-img {
+    width: 33.33%; /* Para 3 imágenes */
+    height: 100%;
+    object-fit: cover; /* Ahora encaja perfectamente sin recortes */
+    flex-shrink: 0;
+    display: block;
+}
+
+.carrusel-2 .ruta-img {
+    width: 50%; /* Para 2 imágenes */
+}
+
+/* Pausar al hacer hover */
+.ruta-card:hover .carrusel-imagenes {
+    animation-play-state: paused;
+}
+
+/* ===== ANIMACIÓN PARA 3 IMÁGENES ===== */
+@keyframes carruselAnimacion {
+    0%, 15% { transform: translateX(0); }
+    33.33%, 48.33% { transform: translateX(-33.33%); }
+    66.66%, 81.66% { transform: translateX(-66.66%); }
+    100% { transform: translateX(0); }
+}
+
+/* ===== ANIMACIÓN PARA 2 IMÁGENES ===== */
+.carrusel-2 {
+    animation-name: carrusel2 !important;
+}
+
+@keyframes carrusel2 {
+    0%, 20% { transform: translateX(0); }
+    50%, 70% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+/* ===== IMAGEN ÚNICA (SIN CARRUSEL) ===== */
+.ruta-imagen > .ruta-img-sola {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* o 'cover', elige el que prefieras */
+    object-position: center;
+    display: block;
+    background: #1a2a3a; /* Fondo de respaldo para bordes */
+}
+/* ===== ESTILOS EXISTENTES DE DESTINOS ===== */
+.rutas {
+    padding: 80px 5%; 
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.rutas-header {
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.rutas h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #1a2a3a;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.rutas h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #d4af37;
+    border-radius: 2px;
+}
+
+.rutas-header p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* ===== GRID DE DESTINOS ===== */
+.rutas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== TARJETA DE DESTINO ===== */
+.ruta-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    text-align: left;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.ruta-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+    border-color: #d4af37;
+}
+
+/* ===== BADGE ===== */
+.ruta-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(26, 42, 58, 0.85);
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+/* ===== INFO ===== */
+.ruta-info {
+    padding: 20px 25px 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.ruta-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #1a2a3a;
+    margin: 0 0 5px 0;
+}
+
+.ruta-ubicacion {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.ruta-descripcion {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+/* ===== CONTACTO ===== */
+.contacto {
+    padding: 80px 5%; 
+     background: linear-gradient(0deg, #0d1b2a 0%, #1a2a3a 30%, #f0f0f0 100%);
+    /* 
+       El degradado va de abajo (0%) hacia arriba (100%).
+       #0d1b2a → azul muy oscuro (abajo)
+       #1a2a3a → azul medio (centro)
+       #f0f0f0 → azul más claro (arriba)
+    */
+    text-align: center;
+    color: #ffffff; /* Texto blanco para contraste */
+}
+
+.contacto-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contacto h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.contacto-content > p {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+/* ===== GRID DE INFORMACIÓN ===== */
+.contacto-info-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    text-align: left;
+}
+
+/* ===== ÍTEMS DE INFORMACIÓN ===== */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f8f9fa;
+    padding: 15px 25px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    background: #f0f0f0;
+    transform: translateX(5px);
+}
+
+.info-item .icono {
+    font-size: 28px;
+    color: #d4af37;
+    width: 40px;
+    text-align: center;
+}
+
+.info-item h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: #1a2a3a;
+    margin: 0 0 2px 0;
+}
+
+.info-item p {
+    color: #555;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ===== BOTÓN DE WHATSAPP ===== */
+.whatsapp-button-wrapper {
+    width: 100%;
+    max-width: 450px;
+    margin-top: 10px;
+}
+
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #25D366;
+    color: #ffffff;
+    padding: 15px 3px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    width: 100%;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+    background: #20b85a;
+}
+/* ===== FOOTER ===== */
+.footer {
+    background: #0d1b2a; /* Azul muy oscuro (coherente con el degradado de contacto) */
+    color: #ffffff;
+    padding: 60px 20px 20px;
+    border-top: 3px solid #d4af37; /* Línea dorada en la parte superior */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ===== COLUMNAS ===== */
+.footer-col h3,
+.footer-col h4 {
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #d4af37; /* Dorado */
+    letter-spacing: 2px;
+}
+
+.footer-desc {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* ===== BOTÓN WHATSAPP EN FOOTER ===== */
+.footer-whatsapp {
+    display: inline-block;
+    background: #25D366;
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.footer-whatsapp:hover {
+    transform: scale(1.05);
+    background: #20b859;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+/* ===== ENLACES RÁPIDOS ===== */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: #d4af37; /* Dorado al hacer hover */
+}
+
+/* ===== CONTACTO ===== */
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact li {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-contact a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: #d4af37;
+}
+
+/* ===== COPYRIGHT ===== */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    text-align: center;
+    padding-top: 20px;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.85rem;
+}
+/* ======================================== */
+/* ===== RESPONSIVE: TABLETS Y MÓVILES ===== */
+/* ======================================== */
+
+/* Tablets (hasta 1024px) */
+@media (max-width: 1024px) {
+    /* HEADER */
+    .header-container {
+        padding: 12px 20px;
+    }
+    .logo a {
+        font-size: 24px;
+    }
+    .nav ul {
+        gap: 15px;
+    }
+    .nav a {
+        font-size: 14px;
+    }
+    .btn-cotizar {
+        padding: 8px 18px;
+        font-size: 12px;
+    }
+
+    /* SERVICIOS */
+    .servicios-grid {
+        gap: 20px;
+    }
+
+    /* DESTINOS */
+    .rutas-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* FLOTA */
+    .flota-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* RESERVAS */
+    .form-reserva {
+        grid-template-columns: 1fr 1fr;
+        padding: 30px;
+        gap: 15px;
+    }
+
+    /* CONTACTO */
+    .info-item {
+        max-width: 100%;
+    }
+}
+
+/* Móviles (hasta 768px) */
+@media (max-width: 768px) {
+    /* ===== HEADER Y MENÚ ===== */
+    .header-container {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+    }
+
+    .logo a {
+        font-size: 20px;
+    }
+
+    /* Mostrar botón hamburguesa */
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        color: #d4af37;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 5px 10px;
+    }
+
+    /* Ocultar menú por defecto en móvil */
+    .nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 15px;
+        border-top: 1px solid rgba(212, 175, 55, 0.2);
+        padding-top: 15px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        padding: 0;
+    }
+
+    .nav a {
+        font-size: 16px;
+        padding: 8px 0;
+        display: block;
+    }
+
+    .nav a::after {
+        display: none;
+    }
+
+    .btn-cotizar {
+        padding: 8px 20px;
+        font-size: 12px;
+        margin-top: 5px;
+        width: auto;
+    }
+
+    /* Clase para mostrar menú (se activa con JS) */
+    .nav.active {
+        display: block;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+        min-height: 60vh;
+        padding: 30px 5%;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero h1::after {
+        width: 50px;
+        height: 2px;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .hero .btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    /* ===== SECCIONES (padding ya tienen 5%, solo ajustamos espaciado) ===== */
+    .servicios,
+    .rutas,
+    .flota,
+    .reservas,
+    .contacto {
+        padding: 50px 5%;
+    }
+
+    .servicios h2,
+    .rutas h2,
+    .flota h2,
+    .reservas h2,
+    .contacto h2 {
+        font-size: 2rem;
+    }
+
+    /* ===== SERVICIOS ===== */
+    .servicios-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .servicio-card {
+        padding: 30px 20px;
+    }
+    .servicio-card h3 {
+        font-size: 1.3rem;
+    }
+    .servicio-icono {
+        font-size: 44px;
+    }
+    .btn-servicio {
+        padding: 8px 25px;
+        font-size: 0.85rem;
+    }
+
+    /* ===== DESTINOS ===== */
+    .rutas-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .ruta-imagen {
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+
+    .ruta-info {
+        padding: 15px 18px 20px;
+    }
+    .ruta-info h3 {
+        font-size: 1.2rem;
+    }
+    .ruta-descripcion {
+        font-size: 0.9rem;
+    }
+    .ruta-badge {
+        font-size: 0.7rem;
+        padding: 4px 12px;
+        top: 10px;
+        left: 10px;
+    }
+
+    /* ===== FLOTA ===== */
+    .flota-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .flota-card .img-vehiculo {
+        height: 180px;
+    }
+    .flota-badge {
+        font-size: 0.65rem;
+        padding: 4px 30px;
+        right: -30px;
+        transform: rotate(45deg);
+    }
+    .flota-info h3 {
+        font-size: 1.2rem;
+    }
+    .btn-flota {
+        padding: 5px 16px;
+        font-size: 0.75rem;
+    }
+
+    /* ===== RESERVAS ===== */
+    .form-reserva {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    .btn-reservar {
+        padding: 12px 30px;
+        font-size: 0.95rem;
+    }
+
+    .file-input-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    .file-label {
+        justify-content: center;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .file-name {
+        text-align: center;
+    }
+
+    .checkbox-label {
+        font-size: 0.95rem;
+    }
+    .checkbox-nota {
+        font-size: 0.8rem;
+        margin-left: 0;
+    }
+
+    /* ===== CONTACTO ===== */
+    .contacto {
+        background: linear-gradient(0deg, #0d1b2a 0%, #1a2a3a 50%, #f0f0f0 100%);
+        padding: 50px 5%;
+    }
+
+    .contacto-info-grid {
+        gap: 15px;
+        width: 100%;
+    }
+
+    .info-item {
+        padding: 12px 15px;
+        max-width: 100%;
+        width: 100%;
+    }
+    .info-item .icono {
+        font-size: 24px;
+        width: 32px;
+    }
+    .info-item h4 {
+        font-size: 0.9rem;
+    }
+    .info-item p {
+        font-size: 0.85rem;
+    }
+
+    .btn-whatsapp {
+        padding: 12px 3px;
+        font-size: 1rem;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+        padding: 40px 5% 15px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-logo {
+        font-size: 1.8rem;
+    }
+    .footer-desc {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+    .footer-whatsapp {
+        margin: 0 auto;
+    }
+
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+
+    .footer-contact li {
+        justify-content: center;
+        font-size: 0.9rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.75rem;
+        padding-top: 15px;
+    }
+}
+
+/* Móviles muy pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .servicios h2,
+    .rutas h2,
+    .flota h2,
+    .reservas h2,
+    .contacto h2 {
+        font-size: 1.6rem;
+    }
+
+    .servicios-header p,
+    .rutas-header p,
+    .flota > p,
+    .reservas-content > p,
+    .contacto-content > p {
+        font-size: 0.95rem;
+    }
+
+    .btn-cotizar {
+        padding: 6px 14px;
+        font-size: 10px;
+    }
+    .logo a {
+        font-size: 18px;
+    }
+
+    .flota-badge {
+        font-size: 0.55rem;
+        padding: 3px 20px;
+        right: -20px;
+        transform: rotate(45deg);
+    }
+
+    .file-label {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+	 main {
+        padding: 0 0%;  /* ← 4% de espacio a cada lado */
+        /* o puedes usar 20px si prefieres un valor fijo */
+    }
+}

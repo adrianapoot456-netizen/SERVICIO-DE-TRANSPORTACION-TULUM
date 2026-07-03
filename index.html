@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Transportación Turística URSA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="#inicio">🚐 <span>URSA</span></a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#flota">Flota</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#reservas" class="btn-cotizar">Cotización</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">☰</div>
+    </div>
+    <div class="header-line"></div>
+</header>
+<main>
+<section id="inicio" class="hero">
+    <div class="hero-content">
+        <h1>Bienvenido a URSA</h1>
+        <p>Transportación turística con comodidad y confianza</p>
+        <a href="#reservas" class="btn">Reserva ahora</a>
+    </div>
+</section>
+<section id="servicios" class="servicios">
+    <div class="servicios-header">
+        <h2>Nuestros Servicios</h2>
+        <p>Conoce nuestros servicios y rutas, diseñados para tu comodidad</p>
+    </div>
+
+    <div class="servicios-grid">
+        <!-- Servicio 1: Aeropuerto -->
+        <div class="servicio-card">
+            <div class="servicio-icono">✈️</div>
+            <h3 class="titulo-dorado">Traslados Aeropuerto</h3>
+            <p>
+                Llegada y salida con seguimiento de vuelos.<br>
+                Puntualidad garantizada.
+            </p>
+           <a href="#reservas" class="btn-servicio">Más Información</a>
+        </div>
+
+        <!-- Servicio 2: Personalizados -->
+        <div class="servicio-card">
+            <div class="servicio-icono">🗺️</div>
+            <h3 class="titulo-dorado">Traslados Personalizados</h3>
+            <p>
+                Destino a tu elección, paradas flexibles<br>
+                y horarios a tu medida.
+            </p>
+            <a href="#reservas" class="btn-servicio">Más Información</a>
+        </div>
+    </div>
+</section>
+    </section>
+<section id="rutas" class="rutas">
+    <div class="rutas-header">
+        <h2>Destinos Turísticos</h2>
+        <p>Descubre los lugares increíbles que puedes visitar con URSA</p>
+    </div>
+
+    <div class="rutas-grid">
+        <!-- 1. Puerto Aventuras (3 imágenes) -->
+        <div class="ruta-card">
+            <div class="ruta-imagen">
+                <div class="carrusel-imagenes carrusel-3">
+                    <img src="puerto-aventuras-1.jpeg" alt="Puerto Aventuras 1" class="ruta-img">
+                    <img src="puerto-aventuras-2.jpeg" alt="Puerto Aventuras 2" class="ruta-img">
+                    <img src="puerto-aventuras-3.jpeg" alt="Puerto Aventuras 3" class="ruta-img">
+                </div>
+                <span class="ruta-badge">⚓ Exclusivo</span>
+            </div>
+            <div class="ruta-info">
+                <h3>Puerto Aventuras</h3>
+                <p class="ruta-ubicacion">📍 Riviera Maya, México</p>
+                <p class="ruta-descripcion">
+                    Puerto Aventuras es una excelente opción si buscas un ambiente exclusivo, seguro y relajado. 
+                    A diferencia de los centros turísticos más concurridos, esta comunidad privada cuenta con una 
+                    marina deportiva, playas tipo caleta de oleaje muy tranquilo y una ubicación estratégica.
+                </p>
+            </div>
+        </div>
+
+        <!-- 2. Zona Hotelera de Tulum (2 imágenes) -->
+        <div class="ruta-card">
+            <div class="ruta-imagen">
+                <div class="carrusel-imagenes carrusel-3">
+                    <img src="tulum-hotelera-1.jpeg" alt="Tulum 1" class="ruta-img">
+                    <img src="tulum-hotelera-2.jpeg" alt="Tulum 2" class="ruta-img">
+					<img src="tulum-hotelera-3.jpeg" alt="Tulum 2" class="ruta-img">
+                </div>
+                <span class="ruta-badge">🌴 Lujo Bohemio</span>
+            </div>
+            <div class="ruta-info">
+                <h3>Zona Hotelera de Tulum</h3>
+                <p class="ruta-ubicacion">📍 Tulum, Quintana Roo</p>
+                <p class="ruta-descripcion">
+                    La zona hotelera de Tulum es ideal por fusionar naturaleza y lujo bohemio. Ofrece acceso directo 
+                    a las mejores playas del Caribe, restaurantes de alta cocina, clubes de playa y una vibrante 
+                    vida nocturna, todo a corta distancia de ruinas mayas y cenotes.
+                </p>
+            </div>
+        </div>
+
+        <!-- 3. Akumal (1 imagen) -->
+        <div class="ruta-card">
+            <div class="ruta-imagen">
+                <img src="akumal.jpeg" alt="Akumal" class="ruta-img-sola">
+                <span class="ruta-badge">🐢 Santuario Marino</span>
+            </div>
+            <div class="ruta-info">
+                <h3>Akumal</h3>
+                <p class="ruta-ubicacion">📍 Quintana Roo, México</p>
+                <p class="ruta-descripcion">
+                    Akumal (que en maya significa "lugar de las tortugas") es una excelente opción porque alberga 
+                    uno de los santuarios marinos más impresionantes del Caribe. Ubicado a solo 30 minutos de Tulum, 
+                    ofrece aguas cristalinas poco profundas ideales para nadar con tortugas verdes en su hábitat natural.
+                </p>
+            </div>
+        </div>
+
+        <!-- 4. Tulum Pueblo (1 imagen) -->
+        <div class="ruta-card">
+            <div class="ruta-imagen">
+                <img src="tulum-pueblo.jpeg" alt="Tulum Pueblo" class="ruta-img-sola">
+                <span class="ruta-badge">🏛️ Auténtico</span>
+            </div>
+            <div class="ruta-info">
+                <h3>Tulum Pueblo</h3>
+                <p class="ruta-ubicacion">📍 Tulum, Quintana Roo</p>
+                <p class="ruta-descripcion">
+                    Tulum Pueblo es una opción fantástica para visitar porque ofrece una alternativa más auténtica. 
+                    Combina la herencia maya, un ambiente relajado y bohemio, y una excelente ubicación para explorar 
+                    las maravillas naturales y arqueológicas del Caribe mexicano.
+                </p>
+            </div>
+        </div>
+
+        <!-- 5. Chichén Itzá (2 imágenes) -->
+        <div class="ruta-card">
+            <div class="ruta-imagen">
+                <div class="carrusel-imagenes carrusel-2">
+                    <img src="chichen-itza-1.jpeg" alt="Chichén Itzá 1" class="ruta-img">
+                    <img src="chichen-itza-2.jpeg" alt="Chichén Itzá 2" class="ruta-img">
+                </div>
+                <span class="ruta-badge">🌎 Maravilla del Mundo</span>
+            </div>
+            <div class="ruta-info">
+                <h3>Chichén Itzá</h3>
+                <p class="ruta-ubicacion">📍 Yucatán, México</p>
+                <p class="ruta-descripcion">
+                    Chichén Itzá es una de las Nuevas Siete Maravillas del Mundo y Patrimonio de la Humanidad. 
+                    Visitarla es imperdible porque te permite caminar por la antigua capital maya, admirar la genialidad 
+                    arquitectónica de la Pirámide de Kukulcán (un calendario solar de piedra exacto), recorrer el imponente 
+                    Gran Juego de Pelota y entender su profunda conexión con la astronomía.
+                </p>
+            </div>
+        </div>
+<!-- 6. Destino: Ruta de los Cenotes (con 3 imágenes) -->
+<div class="ruta-card">
+    <div class="ruta-imagen">
+        <div class="carrusel-imagenes">
+            <img src="cenote-1.jpeg" alt="Cenote Ik Kil" class="ruta-img">
+            <img src="cenote-2.jpeg" alt="Cenote Dos Ojos" class="ruta-img">
+            <img src="cenote-3.jpeg" alt="Cenote Gran Cenote" class="ruta-img">
+        </div>
+        <span class="ruta-badge">💧 Aventura</span>
+    </div>
+    <div class="ruta-info">
+        <h3>Ruta de los Cenotes</h3>
+        <p class="ruta-ubicacion">📍 Quintana Roo, México</p>
+        <p class="ruta-descripcion">
+            Explora los increíbles cenotes de la Riviera Maya, formaciones naturales de agua cristalina 
+            que eran consideradas sagradas por los mayas. Ideal para nadar, bucear y conectar con la 
+            naturaleza en un entorno mágico y único.
+        </p>
+    </div>
+</div>
+<!-- Destino: 7. Zona Arqueológica de Tulum -->
+<div class="ruta-card">
+    <div class="ruta-imagen">
+        <div class="carrusel-imagenes">
+            <img src="tulum-1.jpeg" alt="Tulum ruinas" class="ruta-img">
+            <img src="tulum-2.jpeg" alt="Tulum playa" class="ruta-img">
+            <img src="tulum-3.jpeg" alt="Tulum atardecer" class="ruta-img">
+        </div>
+        <span class="ruta-badge">🌅 Maya</span>
+    </div>
+    <div class="ruta-info">
+        <h3>Zona Arqueológica de Tulum</h3>
+        <p class="ruta-ubicacion">📍 Quintana Roo, México</p>
+        <p class="ruta-descripcion">
+            La Zona Arqueológica de Tulum es uno de los sitios más emblemáticos de la civilización maya, 
+            famoso por ser una antigua ciudad amurallada asentada sobre un acantilado con una espectacular 
+            vista directa al mar Caribe.
+        </p>
+    </div>
+</div>
+<!-- Destino: 8 Cobá -->
+<div class="ruta-card">
+    <div class="ruta-imagen">
+        <div class="carrusel-imagenes">
+            <img src="coba-1.jpeg" alt="Pirámide Nohoch Mul" class="ruta-img">
+            <img src="coba-2.jpeg" alt="Sacbé en Cobá" class="ruta-img">
+            <img src="coba-3.jpeg" alt="Selva de Cobá" class="ruta-img">
+        </div>
+        <span class="ruta-badge">🌿 Arqueológico</span>
+    </div>
+    <div class="ruta-info">
+        <h3>Zona Arqueológica de Cobá</h3>
+        <p class="ruta-ubicacion">📍 Quintana Roo, México</p>
+        <p class="ruta-descripcion">
+            Las Ruinas de Cobá son un imponente yacimiento arqueológico de la cultura maya precolombina 
+            situado en medio de la selva tropical de Quintana Roo, México. Destacan por albergar la 
+            pirámide de Nohoch Mul, una de las estructuras más altas de la Península de Yucatán, y por 
+            conservar una inmensa red de antiguos caminos blancos de piedra conocidos como sacbés.
+        </p>
+    </div>
+</div>
+    </div>
+	
+</section>
+
+<section id="flota" class="flota">
+    <h2>Nuestra Flota Disponible</h2>
+    <p>Vehículos modernos y cómodos para tu viaje, se envian a disponibilidad</p>
+    
+    <div class="flota-grid">
+        <!-- 1. KYA Sedona (Premium) -->
+        <div class="flota-card">
+            <img src="ertiga.jpeg" alt="Sedán ejecutivo" class="img-vehiculo">
+            <div class="flota-info">
+                <h3>Ertiga</h3>
+                <p>Ideal para traslados ejecutivos y aeropuerto.</p>
+                <p><span class="capacidad">👥 6 pasajeros maximo</span></p>
+                
+            </div>
+        </div>
+
+        <!-- 2. Suzuki (Popular) -->
+        <div class="flota-card">
+            <img src="van.jpeg" alt="Van para grupos" class="img-vehiculo">
+            <div class="flota-info">
+                <h3>Toyota hiace </h3>
+                <p>Perfecta para grupos grandes o familias.</p>
+                <p><span class="capacidad">👥 14 pasajeros maximo</span></p>
+                
+            </div>
+        </div>
+
+        <!-- 3. SUV (Económico) -->
+        <div class="flota-card">
+            <img src="Kia.jpeg" alt="SUV turístico" class="img-vehiculo">
+            <div class="flota-info">
+                <h3>Kia</h3>
+                <p>Para viajes turísticos con espacio y comodidad.</p>
+                <p><span class="capacidad">👥 5 pasajeros</span></p>
+                
+            </div>
+        </div>
+
+        <!-- 4. Minibús (Familiar) -->
+        <div class="flota-card">
+            <img src="bus.jpeg" alt="Minibús para grupos" class="img-vehiculo">
+            <div class="flota-info">
+                <h3>Nissan Urvan</h3>
+                <p>Ideal para grupos grandes o familias.</p>
+                <p><span class="capacidad">👥 14 pasajeros maximo</span></p>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="reservas" class="reservas">
+    <div class="reservas-content">
+        <h2>Reserva tu viaje o solicita una cotización</h2>
+        <p>Completa el formulario y te contactaremos para confirmar tu servicio</p>
+        
+        <form id="form-reserva" class="form-reserva">
+            <!-- Datos personales -->
+            <div class="form-group">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+            </div>
+            
+            <!-- Tipo de servicio -->
+            <div class="form-group">
+                <select id="servicio" name="servicio" required>
+                    <option value="">Tipo de servicio</option>
+                    <option value="aeropuerto">✈️ Traslado Aeropuerto</option>
+                    <option value="personalizado">🗺️ Traslado Personalizado</option>
+                </select>
+            </div>
+            
+            <!-- Fecha y horario -->
+            <div class="form-group">
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="form-group">
+                <input type="time" id="horario" name="horario" value="08:00" required>
+            </div>
+            
+            <!-- Destino y pasajeros -->
+            <div class="form-group">
+                <input type="text" id="destino" name="destino" placeholder="Destino o dirección" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="pasajeros" name="pasajeros" placeholder="Número de pasajeros" min="1" required>
+            </div>
+            
+            <!-- Detalles adicionales -->
+            <div class="form-group full-width">
+                <textarea id="detalles" name="detalles" placeholder="Detalles adicionales (horario, paradas, equipaje, etc.)" rows="4"></textarea>
+            </div>
+             <div class="form-group full-width file-upload">
+                <label for="cot-archivo">Adjunta tu itinerario o documentos (opcional)</label>
+                <div class="file-input-wrapper">
+                    <input type="file" id="cot-archivo" accept=".pdf,.doc,.docx,.jpg,.png">
+                    <label for="cot-archivo" class="file-label">
+                        <span class="file-icon">📎</span>
+                        <span class="file-text">Seleccionar archivo</span>
+                    </label>
+                    <span class="file-name">Ningún archivo seleccionado</span>
+                </div>
+            </div>
+            <!-- Checkbox para cotización previa -->
+            <div class="form-group full-width checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="solicitar-cotizacion" name="solicitar-cotizacion">
+                    🔍 Solicito una cotización antes de confirmar
+                </label>
+                <p class="checkbox-nota">*Si marcas esta opción, te enviaremos un presupuesto detallado antes de finalizar la reserva.</p>
+            </div>
+            
+            <!-- Botón -->
+            <div class="form-group full-width">
+<button type="submit" class="btn btn-reservar" id="btn-enviar-whatsapp">📩 Enviar solicitud</button>
+            </div>
+            
+            <p class="form-nota">📋 Todos los campos son obligatorios. Responderemos en menos de 24 horas.</p>
+        </form>
+    </div>
+</section>
+
+<section id="contacto" class="contacto">
+    <div class="contacto-content">
+        <h2>Contáctanos</h2>
+        <p>Estamos disponibles 24/7 para ayudarte</p>
+        
+        <div class="contacto-info-grid">
+            <!-- Información de contacto -->
+            <div class="info-item">
+                <span class="icono">📞</span>
+                <div>
+                    <h4>Teléfono</h4>
+                    <p>+52 984 218 05 14</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <span class="icono">✉️</span>
+                <div>
+                    <h4>Email</h4>
+                    <p>saenz_04arss@hotmail.com</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <span class="icono">🕐</span>
+                <div>
+                    <h4>Horario</h4>
+                    <p>Lunes a Domingo · 24 horas</p>
+                </div>
+            </div>
+            
+            <!-- Botón de WhatsApp (destacado) -->
+            <div class="whatsapp-button-wrapper">
+                <a href="https://wa.me/529842180514?text=Hola%2C%20me%20comunico%20desde%20la%20p%C3%A1gina%20de%20URSA.%20Quisiera%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20transporte%20y%20disponibilidad.%20%C2%A1Gracias!" 
+                   class="btn-whatsapp" 
+                   target="_blank">
+                    💬 Contáctanos por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<footer class="footer">
+    <div class="footer-content">
+        <!-- Columna 1: Logo y descripción -->
+        <div class="footer-col">
+            <h3 class="footer-logo">URSA</h3>
+            <p class="footer-desc">
+                Transportación turística con comodidad, seguridad y puntualidad. 
+                Viaja con estilo y confianza.
+            </p>
+            <!-- Botón de WhatsApp (opcional) -->
+            <a href="https://wa.me/529842180514?text=Hola%2C%20me%20comunico%20desde%20la%20p%C3%A1gina%20de%20URSA.%20Quisiera%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20transporte%20y%20disponibilidad.%20%C2%A1Gracias!" 
+               target="_blank" 
+               class="footer-whatsapp">
+                💬 WhatsApp
+            </a>
+        </div>
+
+        <!-- Columna 2: Enlaces rápidos -->
+        <div class="footer-col">
+            <h4>Enlaces rápidos</h4>
+            <ul class="footer-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#rutas">Destinos</a></li>
+                <li><a href="#flota">Flota</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 3: Contacto -->
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <ul class="footer-contact">
+                <li>📞 <a href="tel:+529842180514">+52 984 218 05 14</a></li>
+                <li>✉️ <a href="mailto:saenz_04arss@hotmail.com">saenz_04arss@hotmail.com</a></li>
+                <li>🕐 Lunes a Domingo · 24 horas</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Transportación Turística URSA. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="script.js">
+</script>
+</body>
+</html>
